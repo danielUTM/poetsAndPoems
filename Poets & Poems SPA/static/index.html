@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Single page website that gives poets and their poems.">
+      <meta name="author" content="Daniel Campbell">
+      <title>Poets & Poems</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   </head>
+
+   <body>
+      <main>
+         <div class="jumbotron">
+            <div class="container">
+               <h1 class="display-3">Poets & Poems</h1>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <h2 id="ws-name"></h2>
+                  <p id="ws-id" hidden></p>
+                  <div id = "ws-img"></div>
+                  <p id="ws-bio"></p>
+                  <p id="ws-poem"></p>
+                  <button id="ws-button" class="btn btn-secondary">Get next poem</button>
+                  <br><br>
+                  <button id="np1-button" class="btn btn-secondary">Get a random poet</button>
+               </div>
+               <div class="col-md-4">
+                  <h2 id="ww-name"></h2>
+                  <p id="ww-id" hidden></p>
+                  <div id = "ww-img"></div>
+                  <p id="ww-bio"></p>
+                  <p id="ww-poem"></p>
+                  <button id="ww-button" class="btn btn-secondary">Get next poem</button>
+                  <br><br>
+                  <button id="np2-button" class="btn btn-secondary">Get a random poet</button>
+               </div>
+               <div class="col-md-4">
+                  <h2 id="eap-name"></h2>
+                  <p id="eap-id" hidden></p>
+                  <div id="eap-img"></div>
+                  <p id="eap-bio"></p>
+                  <p id="eap-poem"></p>
+                  <button id="eap-button" class="btn btn-secondary">Get next poem</button>
+                  <br><br>
+                  <button id="np3-button" class="btn btn-secondary">Get a random poet</button>
+               </div>
+            </div>
+
+            <br>
+
+            <h2>Add your own poet:</h2>
+            <h4>(Poet will not display until poem has been added in second form below)</h4>
+            <form id="upload-poet">
+               <div class="form-group">
+                  <label for="upload-poet-name">Name:</label>
+                  <input type="text" class="form-control" id="upload-poet-name" placeholder="Enter name" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label for="upload-poet-dob">Date of Birth:</label>
+                  <input type="date" class="form-control" id="upload-poet-dob" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label for="upload-poet-dod">Date of Death:</label>
+                  <input type="date" class="form-control" id="upload-poet-dod" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label for="upload-poet-age">Age:</label>
+                  <input type="number" class="form-control" id="upload-poet-age" autocomplete="off" placeholder="Enter age" required>
+               </div>
+               <div class="form-group">
+                  <label for="upload-poet-pob">Place of Birth:</label>
+                  <input type="text" class="form-control" id="upload-poet-pob" autocomplete="off" placeholder="Enter place of birth" required>
+               </div>
+               <div class="form-group">
+                  <label for="upload-poet-movement">Movement:</label>
+                  <input type="text" class="form-control" id="upload-poet-movement" autocomplete="off" placeholder="Enter movement" required>
+               </div>
+               <div class="form-group">
+                  <label for="input-file">Upload Image</label>
+                  <input type="file" class="form-control-file" id="input-file" accept="image/*" required>
+               </div>
+               <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+
+            <br>
+
+            <h2>Add poem to poet:</h2>
+            <form id="upload-poem">
+               <div class="form-group">
+                  <label for="upload-poem-poet">Poet:</label>
+                  <select class="form-control" id="upload-poem-poet">
+                  </select>
+               </div>
+               <div class="form-group">
+                  <label for="upload-poem-title">Title:</label>
+                  <input type="text" class="form-control" id="upload-poem-title" autocomplete="off" placeholder="Enter title" required>
+               </div>
+               <div class="form-group">
+                  <label for="upload-poem-text">Text:</label>
+                  <textarea class="form-control" id="upload-poem-text" rows="5" required></textarea>
+               </div>
+               <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+         </div>
+      </main>
+      
+      <br> 
+
+      <footer class="container">
+         <p>All poems and images used within this website are in the <a href = "https://www.dacs.org.uk/knowledge-base/factsheets/works-in-the-public-domain">public domain</a>.</p>
+         <p>Page created using <a href="https://getbootstrap.com" target="_blank">Bootstrap</a>.</p>
+      </footer>
+      <script src='./assets/js/index.js'></script>
+   </body>
+</html>
